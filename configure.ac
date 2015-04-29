@@ -6,7 +6,7 @@ AM_INIT_AUTOMAKE()
 AC_CONFIG_MACRO_DIR([acinclude.d])
 
 # if CXXFLAGS is not given by user, don't use default of "-O2 -g"
-: ${CXXFLAGS=""}
+: ${CXXFLAGS="-O0 -g"}
 
 AC_PROG_CXX
 AC_PROG_CXXCPP

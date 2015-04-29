@@ -41,6 +41,7 @@ license as described in the file LICENSE.
 #include "active.h"
 #include "kernel_svm.h"
 #include "parse_example.h"
+#include "mgd.h"
 
 using namespace std;
 //
@@ -737,6 +738,7 @@ void parse_reductions(vw& all)
   all.reduction_stack.push_back(GD::setup);
   all.reduction_stack.push_back(kernel_svm_setup);
   all.reduction_stack.push_back(ftrl_setup);
+  all.reduction_stack.push_back(MGD::mygd_setup);
   all.reduction_stack.push_back(sender_setup);
   all.reduction_stack.push_back(gd_mf_setup);
   all.reduction_stack.push_back(print_setup);
